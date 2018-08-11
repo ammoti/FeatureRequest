@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>New Features</h1>
+<main role="main" class="container" id="createFeature">
+    <form action="/create_feature" method="post">
+        <div class="form-group">
+            <label for="FeatureTitle">Title</label>
+            <input class="form-control" id="FeatureTitle" name="featureTitle" type="text" data-bind="value:featureTitle" required>
+        </div>
+        <div class="form-group">
+            <label for="surname">Description</label>
+            <textarea class="form-control" id="FeatureDescription" name="featureDescription"  data-bind="value:featureDescription" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="feautureClient">Client</label>
+            <select class="form-control" id="feautureClient" name="feautureClient" data-bind="
+                    options: clientValues,
+                    optionsText: 'name',
+                    optionsValue: 'id',
+                    value: selectedClient"></select>
+        </div>
+        <div class="form-group">
+            <label for="productArea">Product Area</label>
+            <select class="form-control" id="productArea" name="area" data-bind="
+                    options: areaValues,
+                    optionsText: 'name',
+                    optionsValue: 'id',
+                    value: selectedArea"></select>
+        </div>
+        <div class="form-group">
+            <label for="phone">Client Priority</label>
+            <input class="form-control" min="1" id="priority" name="priority" type="number" data-bind="value:priority" required>
+        </div>
+        <div class="form-group">
+            <label for="target">Target</label>
+            <input class="form-control" id="target" name="target" type="date" data-bind="value:target" required>
+        </div>
+        <input type="submit" class="btn btn-success" value="Add">
+    </form>
+</main>
+    {% endblock %}

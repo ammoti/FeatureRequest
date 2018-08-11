@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main role="main" class="container" id="featureList">
+    <div class="row">
+        <div class="col-12">
+            {% if features|length > 0 %}
+            <h3 class="py-4">Feature Submitted</h3>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Client</th>
+                        <th scope="col">Priority</th>
+                        <th scope="col">Target Date</th>
+                        <th scope="col">Product Area</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for feature in features %}
+                    <tr>
+                        <td>{{ feature.title|e }}<br><small>{{ feature.description| e}}</small></td>
+                        <td>{{ feature.client|e }}</td>
+                        <td>{{ feature.priority|e }}</td>
+                        <td>{{ feature.target_date|e }}</td>
+                        <td>{{ feature.product_area|e }}</td>
+                        <td><a class="clickable-icon" data-bind="click: function(data, event) { deleteFeature({{feature.id}}, data, event) }">DELETE</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <div class="py-4">There is not any request yet.</div>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}
