@@ -35,7 +35,7 @@ var featureRequestModel = {
             url: '/delete/' + id,
             type: 'DELETE',
             success: function (response) {
-                window.location = "/";
+                window.location = '/';
             },
             error: function (error) {
                 console.log(error);

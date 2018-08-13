@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ammoti/BriteCore.FeatureRequests.svg?branch=master)](https://travis-ci.org/ammoti/BriteCore.FeatureRequests)
+[![Build Status](https://travis-ci.org/ammoti/FeatureRequest.svg?branch=master)](https://travis-ci.org/ammoti/FeatureRequest)
 
 # BriteCore.FeatureRequests
 
@@ -68,11 +68,11 @@ You can see the results whether test OK or FAIL.
 
 ## Deployment
 
-For Continuous Integration I have used [travis-ci](https://travis-ci.org/) and for the host I use [Heroku](https://heroku.com/) (free plan). If the commit passing all automated test on travis it's directly deploying on Heroku platform
+For Continuous Integration I have used [travis-ci](https://travis-ci.org/ammoti/FeatureRequest) and for the host I use [Heroku](https://heroku.com/) (free plan). If the commit passing all automated test on travis it's directly deploying on Heroku platform
 
 ## Live 
 
-You can also experience this project in live at https://britecore-featurerequest.herokuapp.com (sometimes heroku will shutdown the server please inform me at this moments).
+You can also experience this project in live at https://britecore-featurerequests.herokuapp.com/ (sometimes heroku will shutdown the server please inform me at this moments).
 
 
 ## Authors
